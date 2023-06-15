@@ -40,7 +40,8 @@ struct TasksList: View {
         }
     }
     
-    @State var vm: ViewModel = ViewModel()
+    @State private var vm: ViewModel = ViewModel()
+    @State private var showCreateTaskModal = false
     
     
     var body: some View {
@@ -50,15 +51,23 @@ struct TasksList: View {
                     TodoCell(task: task) {
                         vm.delete(task: task)
                     }
-                        .accessibilityIdentifier("tasklist.todo.cell")
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "plus")
+                    Button(action: {
+                        showCreateTaskModal.toggle()
+                    }, label: {
+                        Image(systemName: "plus")
+                            .foregroundStyle(.red)
+                    })
+                    .accessibilityIdentifier("tasklist.create.task.button")
                 }
             }
             .navigationTitle("Todo It!")
+            .sheet(isPresented: $showCreateTaskModal) {
+                TaskCreateView()
+            }
         }
     }
 }
@@ -112,6 +121,8 @@ struct TodoCell: View {
                 )
             )
         }
+        .accessibilityElement(children: .contain)
+        .accessibilityIdentifier("tasklist.todo.cell")
     }
 }
 

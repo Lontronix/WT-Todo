@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "A1D5887A-8DAF-4D2B-970D-C8EA8E6AED58",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WT-Todo.xcodeproj",
+        "identifier" : "6ED4B7342A3A8FCD0026CB1E",
+        "name" : "WT-TodoUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -7,8 +7,15 @@
 
 import Foundation
 
-enum TaskPriority {
-    case high, medium, low
+enum TaskPriority: String, CaseIterable, Identifiable {
+    
+    var id: String {
+        return self.rawValue
+    }
+    
+    case high = "High"
+    case medium = "Medium"
+    case low = "Low"
 }
 
 struct ToDoTask: Identifiable {

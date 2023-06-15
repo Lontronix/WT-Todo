@@ -24,19 +24,42 @@ class BaseTest: XCTestCase {
     }
 }
 
-class TodoUITests: BaseTest {
+class TaskListUITests: BaseTest {
     
     func test_tapping_on_complete_removes_task() {
-        // need to asser that 3 elements exist
-        
-        //TODO: mock data
+        let taskCells = app.otherElements.matching(identifier: "tasklist.todo.cell")
+        XCTAssertEqual(taskCells.count, 3)
         
         let button = app.buttons["tasklist.complete.button-476751FD-7BCF-4C72-98E5-3E0176762296"]
-        button.waitForExistence(timeout: defaultTimeout)
+        let _ = button.waitForExistence(timeout: defaultTimeout)
         button.tap()
         
-        let labels = app.otherElements["tasklist.todo.cell"]
-        
-        XCTAssertEqual(labels.label.count, 2)
+        XCTAssertEqual(taskCells.count, 2)
     }
+}
+
+class TaskCreateUITests: BaseTest {
+    
+    override func setUp() {
+        app.launch()
+        let showCreateTaskButton = app.buttons["tasklist.create.task.button"]
+        let _ = showCreateTaskButton.waitForExistence(timeout: defaultTimeout)
+        showCreateTaskButton.tap()
+    }
+    
+    func test_create_button_disabled_when_empty_title() {
+        let createTaskButton = app.buttons["create_task.create.button"]
+        XCTAssertFalse(createTaskButton.isEnabled)
+    }
+    
+    func test_create_button_enaled_when_nonempty_title() {
+        let createTaskButton = app.buttons["create_task.create.button"]
+        
+        let titleTextField = app.textFields["create_task.title.label"]
+        titleTextField.tap()
+        titleTextField.typeText("Sample Title")
+        
+        XCTAssertTrue(createTaskButton.isEnabled)
+    }
+    
 }
