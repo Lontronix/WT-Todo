@@ -13,7 +13,19 @@
 		6ED4B7272A3A8B070026CB1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED4B7262A3A8B070026CB1E /* Preview Assets.xcassets */; };
 		6ED4B72E2A3A8E300026CB1E /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4B72D2A3A8E300026CB1E /* ToDoTask.swift */; };
 		6ED4B7302A3A8E510026CB1E /* TaskCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4B72F2A3A8E510026CB1E /* TaskCreateView.swift */; };
+		6ED4B7382A3A8FCD0026CB1E /* WT_TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4B7372A3A8FCD0026CB1E /* WT_TodoUITests.swift */; };
+		6ED4B73A2A3A8FCD0026CB1E /* WT_TodoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED4B7392A3A8FCD0026CB1E /* WT_TodoUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6ED4B73B2A3A8FCD0026CB1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6ED4B7142A3A8B060026CB1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6ED4B71B2A3A8B060026CB1E;
+			remoteInfo = "WT-Todo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6ED4B71C2A3A8B060026CB1E /* WT-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WT-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,10 +35,20 @@
 		6ED4B7262A3A8B070026CB1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6ED4B72D2A3A8E300026CB1E /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
 		6ED4B72F2A3A8E510026CB1E /* TaskCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreateView.swift; sourceTree = "<group>"; };
+		6ED4B7352A3A8FCD0026CB1E /* WT-TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WT-TodoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED4B7372A3A8FCD0026CB1E /* WT_TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT_TodoUITests.swift; sourceTree = "<group>"; };
+		6ED4B7392A3A8FCD0026CB1E /* WT_TodoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT_TodoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6ED4B7192A3A8B060026CB1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED4B7322A3A8FCD0026CB1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				6ED4B71E2A3A8B060026CB1E /* WT-Todo */,
+				6ED4B7362A3A8FCD0026CB1E /* WT-TodoUITests */,
 				6ED4B71D2A3A8B060026CB1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				6ED4B71C2A3A8B060026CB1E /* WT-Todo.app */,
+				6ED4B7352A3A8FCD0026CB1E /* WT-TodoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +97,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6ED4B7362A3A8FCD0026CB1E /* WT-TodoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6ED4B7372A3A8FCD0026CB1E /* WT_TodoUITests.swift */,
+				6ED4B7392A3A8FCD0026CB1E /* WT_TodoUITestsLaunchTests.swift */,
+			);
+			path = "WT-TodoUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -93,6 +126,24 @@
 			productReference = 6ED4B71C2A3A8B060026CB1E /* WT-Todo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6ED4B7342A3A8FCD0026CB1E /* WT-TodoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6ED4B73D2A3A8FCD0026CB1E /* Build configuration list for PBXNativeTarget "WT-TodoUITests" */;
+			buildPhases = (
+				6ED4B7312A3A8FCD0026CB1E /* Sources */,
+				6ED4B7322A3A8FCD0026CB1E /* Frameworks */,
+				6ED4B7332A3A8FCD0026CB1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6ED4B73C2A3A8FCD0026CB1E /* PBXTargetDependency */,
+			);
+			name = "WT-TodoUITests";
+			productName = "WT-TodoUITests";
+			productReference = 6ED4B7352A3A8FCD0026CB1E /* WT-TodoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -105,6 +156,10 @@
 				TargetAttributes = {
 					6ED4B71B2A3A8B060026CB1E = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					6ED4B7342A3A8FCD0026CB1E = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 6ED4B71B2A3A8B060026CB1E;
 					};
 				};
 			};
@@ -122,6 +177,7 @@
 			projectRoot = "";
 			targets = (
 				6ED4B71B2A3A8B060026CB1E /* WT-Todo */,
+				6ED4B7342A3A8FCD0026CB1E /* WT-TodoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +189,13 @@
 			files = (
 				6ED4B7272A3A8B070026CB1E /* Preview Assets.xcassets in Resources */,
 				6ED4B7242A3A8B070026CB1E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6ED4B7332A3A8FCD0026CB1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +213,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6ED4B7312A3A8FCD0026CB1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ED4B7382A3A8FCD0026CB1E /* WT_TodoUITests.swift in Sources */,
+				6ED4B73A2A3A8FCD0026CB1E /* WT_TodoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6ED4B73C2A3A8FCD0026CB1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6ED4B71B2A3A8B060026CB1E /* WT-Todo */;
+			targetProxy = 6ED4B73B2A3A8FCD0026CB1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6ED4B7282A3A8B070026CB1E /* Debug */ = {
@@ -330,6 +410,40 @@
 			};
 			name = Release;
 		};
+		6ED4B73E2A3A8FCD0026CB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K36HYHZA7X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lontronix.WT-TodoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WT-Todo";
+			};
+			name = Debug;
+		};
+		6ED4B73F2A3A8FCD0026CB1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K36HYHZA7X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lontronix.WT-TodoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WT-Todo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +461,15 @@
 			buildConfigurations = (
 				6ED4B72B2A3A8B070026CB1E /* Debug */,
 				6ED4B72C2A3A8B070026CB1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED4B73D2A3A8FCD0026CB1E /* Build configuration list for PBXNativeTarget "WT-TodoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6ED4B73E2A3A8FCD0026CB1E /* Debug */,
+				6ED4B73F2A3A8FCD0026CB1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

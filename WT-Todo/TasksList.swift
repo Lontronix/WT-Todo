@@ -13,9 +13,24 @@ struct TasksList: View {
     @Observable
     class ViewModel {
         var tasks: [ToDoTask] = [
-            ToDoTask(title: "Remember the Milk", priority: .high, dueDate: .now, id: UUID()),
-            ToDoTask(title: "Todoist", priority: .medium, dueDate: .now, id: UUID()),
-            ToDoTask(title: "omnifocus", priority: .low, dueDate: .now, id: UUID())
+            ToDoTask(
+                title: "Remember the Milk",
+                priority: .high,
+                dueDate: .now,
+                id: UUID(uuidString: "F20DFA2A-9116-44E4-A326-06047319F900")!
+            ),
+            ToDoTask(
+                title: "Todoist",
+                priority: .medium,
+                dueDate: .now,
+                id: UUID(uuidString: "C50516AF-63FB-4D91-BF22-270A7BF65079")!
+            ),
+            ToDoTask(
+                title: "omnifocus",
+                priority: .low,
+                dueDate: .now,
+                id: UUID(uuidString: "476751FD-7BCF-4C72-98E5-3E0176762296")!
+            )
         ]
         
         func delete(task: ToDoTask) {
@@ -61,6 +76,7 @@ struct TasksList: View {
                                 .padding()
                                 .background(Color(uiColor: .systemGreen))
                         })
+                        .accessibilityIdentifier("tasklist.complete.button-\(task.id.uuidString)")
                         .tint(Color.white)
                         .clipShape(
                             .rect(
