@@ -11,7 +11,7 @@ import SwiftUI
 struct WT_TodoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TasksList()
         }
     }
 }
