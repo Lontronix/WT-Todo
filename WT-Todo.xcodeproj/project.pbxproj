@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6EA0C3F62A3A9F4100A90AAA /* WT-Todo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "WT-Todo.xctestplan"; sourceTree = "<group>"; };
 		6ED4B71C2A3A8B060026CB1E /* WT-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WT-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED4B71F2A3A8B060026CB1E /* WT_TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WT_TodoApp.swift; sourceTree = "<group>"; };
 		6ED4B7212A3A8B060026CB1E /* TasksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksList.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		6ED4B7132A3A8B060026CB1E = {
 			isa = PBXGroup;
 			children = (
+				6EA0C3F62A3A9F4100A90AAA /* WT-Todo.xctestplan */,
 				6ED4B71E2A3A8B060026CB1E /* WT-Todo */,
 				6ED4B7362A3A8FCD0026CB1E /* WT-TodoUITests */,
 				6ED4B71D2A3A8B060026CB1E /* Products */,

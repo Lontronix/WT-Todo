@@ -47,48 +47,10 @@ struct TasksList: View {
         NavigationStack {
             List {
                 ForEach(vm.tasks) { task in
-                    HStack {
-                        
-                        if task.priority == .high {
-                            Rectangle()
-                                .fill(.red)
-                                .frame(width: 10)
-                        } else if task.priority == .medium {
-                            Rectangle()
-                                .fill(.yellow)
-                                .frame(width: 10)
-                        } else {
-                            Rectangle()
-                                .fill(.green)
-                                .frame(width: 10)
-                        }
-                        
-                        VStack(alignment: .leading) {
-                            Text(task.title)
-                            Text(task.dueDate.formatted())
-                        }
-                        
-                        Spacer()
-                        Button(action: {
-                            vm.delete(task: task)
-                        }, label: {
-                            Text("Complete!")
-                                .padding()
-                                .background(Color(uiColor: .systemGreen))
-                        })
-                        .accessibilityIdentifier("tasklist.complete.button-\(task.id.uuidString)")
-                        .tint(Color.white)
-                        .clipShape(
-                            .rect(
-                                cornerRadii:
-                                    RectangleCornerRadii(
-                                        topLeading: 10,
-                                        bottomLeading: 10,
-                                        bottomTrailing: 10,
-                                        topTrailing: 10)
-                            )
-                        )
+                    TodoCell(task: task) {
+                        vm.delete(task: task)
                     }
+                        .accessibilityIdentifier("tasklist.todo.cell")
                 }
             }
             .toolbar {
@@ -97,6 +59,58 @@ struct TasksList: View {
                 }
             }
             .navigationTitle("Todo It!")
+        }
+    }
+}
+
+struct TodoCell: View {
+    
+    var task: ToDoTask
+    
+    var onDelete: (() -> Void)?
+    
+    var body: some View {
+        HStack {
+            
+            if task.priority == .high {
+                Rectangle()
+                    .fill(.red)
+                    .frame(width: 10)
+            } else if task.priority == .medium {
+                Rectangle()
+                    .fill(.yellow)
+                    .frame(width: 10)
+            } else {
+                Rectangle()
+                    .fill(.green)
+                    .frame(width: 10)
+            }
+            
+            VStack(alignment: .leading) {
+                Text(task.title)
+                Text(task.dueDate.formatted())
+            }
+            
+            Spacer()
+            Button(action: {
+                onDelete?()
+            }, label: {
+                Text("Complete!")
+                    .padding()
+                    .background(Color(uiColor: .systemGreen))
+            })
+            .accessibilityIdentifier("tasklist.complete.button-\(task.id.uuidString)")
+            .tint(Color.white)
+            .clipShape(
+                .rect(
+                    cornerRadii:
+                        RectangleCornerRadii(
+                            topLeading: 10,
+                            bottomLeading: 10,
+                            bottomTrailing: 10,
+                            topTrailing: 10)
+                )
+            )
         }
     }
 }
